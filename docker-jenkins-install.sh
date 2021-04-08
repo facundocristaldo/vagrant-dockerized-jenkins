@@ -20,6 +20,8 @@ usermod -aG docker vagrant
 mkdir -p /var/jenkins_home
 chown -R 1000:1000 /var/jenkins_home/
 
+docker login
+
 echo "Going to build jenkins-docker image"
 ls -l /vagrant
 docker build -t jenkins-docker /vagrant/.
